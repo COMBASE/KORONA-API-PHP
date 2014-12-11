@@ -2,7 +2,7 @@
 require_once("KoronaApi.class.php");
 
 
-$token = "01doyuqy64kldg01v8vm62kevjww01x3p4ywdlqp1106m5j25wfp8ud";
+$token = "your token";
 
 $orgNo = "139";
 
