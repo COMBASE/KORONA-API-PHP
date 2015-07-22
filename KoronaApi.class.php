@@ -70,7 +70,6 @@ class KoronaApi
 	public function post($path, $obj)
 	{
 		$content = json_encode($obj);
-		echo "\n\npost request: $content\n\n";
 		$options = array(
     				'http' => array(
         			'header'  => "Content-type: application/json\r\n",
@@ -80,7 +79,6 @@ class KoronaApi
 			);
 		$context  = stream_context_create($options);
 		$content = file_get_contents(self::URL."/v1/".$this->token."/".$path, false, $context);
-		echo "\n\npost response: $content\n\n";
 		$result = json_decode($content);
 		if (isset($result->error))
 			throw new Exception($result->error);
